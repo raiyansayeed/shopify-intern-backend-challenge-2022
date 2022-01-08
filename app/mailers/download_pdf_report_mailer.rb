@@ -1,0 +1,2 @@
+class DownloadPdfReportMailer < ApplicationMailer
+end

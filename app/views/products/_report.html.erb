@@ -1,0 +1,13 @@
+<h1>Most in stock products</h1>
+<div>
+  <% most_in_stock.each do |arr| %>
+    <p><%= arr[0] %>: <%= arr[1] %>
+    </p>
+  <% end %>
+</div>
+<h1>Out of stock products</h1>
+<div>
+  <% out_of_stock.each do |p| %>
+    <p><%= p.product.name %> - <%= p.kind %></p>
+  <% end %>
+</div>
