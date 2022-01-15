@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update product" do
     patch product_url(@product), params: { product: { description: @product.description, name: @product.name, seller_id: @product.seller_id } }
-    assert_redirected_to product_url(@product)
+    assert_response 302
   end
 
   test "should destroy product" do

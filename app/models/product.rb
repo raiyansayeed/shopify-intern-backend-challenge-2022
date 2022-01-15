@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   extend FriendlyId
 
   belongs_to :seller
-  has_many :inventories
+  has_many :inventories, dependent: :destroy
 
   friendly_id :name, use: :slugged
 

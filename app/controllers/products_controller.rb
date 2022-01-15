@@ -76,10 +76,11 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.friendly.find(params[:id])
+      # redirect_to request.params.merge(id: @product.friendly_id), status: 301 unless @product.friendly_id == params[:id]
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:description, :seller_id, :name, inventories_attributes: [:id, :quantity, :kind, :price, :_destroy])
+      params.require(:product).permit(:id, :description, :seller_id, :name, inventories_attributes: [:id, :quantity, :kind, :price, :_destroy])
     end
 end

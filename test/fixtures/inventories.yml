@@ -3,11 +3,11 @@
 one:
   quantity: 1
   product: one
-  type: 
+  kind: "red"
   price: 9.99
 
 two:
   quantity: 1
   product: two
-  type: 
+  kind: "blue"
   price: 9.99
