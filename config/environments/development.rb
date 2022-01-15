@@ -1,5 +1,11 @@
 require "active_support/core_ext/integer/time"
 
+class MyLoggerFormatter
+  def call(severity, time, progname, msg)
+    "#{Time.now.strftime("%F %T").to_s} #{severity} #{msg}\n"
+  end
+end
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -7,6 +13,10 @@ Rails.application.configure do
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+
+  logger           = ActiveSupport::Logger.new(STDOUT)
+  logger.formatter = MyLoggerFormatter.new
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
 
   config.slowpoke.timeout = 1
   config.consider_all_requests_local = false

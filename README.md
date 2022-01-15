@@ -1,6 +1,6 @@
 # Logistify (Shopify 2022 Backend Intern Technical Challenge)
 
-Note that if your paths are not set up correctly, you may have to run ```bin/rails [COMMAND]``` instead of the normal `rails` command.
+This is my submission for the Shopify Backend Intern Technical Challenge. My extra feature is "__Ability to generate a report on inventory levels over time, like: most in-stock or out-of-stock last month__"
 
 ## Ruby version
 
@@ -16,7 +16,7 @@ This project uses Ruby 2.7.3. If you don't have Ruby already installed, follow t
 ## System dependencies
 
 (Optional)
-- GraphViz (for UML class creation)
+- [GraphViz](https://graphviz.org/download/) (for UML class creation)
 
 (Required)
 - PostgreSQL
@@ -25,8 +25,9 @@ Follow the instructions on the [Postgres website](https://www.postgresql.org/dow
 
 ## Configuration
 
-Make sure PostgreSQL is running on your computer.
+Make sure PostgreSQL is started up on your computer.
 
+Note that if your environment paths are not set up correctly, you may have to run ```bin/rails [COMMAND]``` instead of the normal `rails` command.
 ## Database creation
 
 ```bash
@@ -47,8 +48,6 @@ Test are located in the `test/` folder.
 ```bash
 rails t
 ```
-
-<!-- ## Services (job queues, cache servers, search engines, etc.) -->
 
 
 ## Deployment instructions
@@ -72,11 +71,6 @@ The app includes
 All available URLS can be seen with 
 ```bash
 bin/rails routes
-```
-
-You can view UML diagrams in the docs/ folder for a better understanding of the schema. To generate new diagrams, run
-```bash  
-rake diagram:all
 ```
 
 Models (and their respective validations) can be seen in the `app/models/` folder
