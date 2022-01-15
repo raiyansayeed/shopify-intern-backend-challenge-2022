@@ -26,7 +26,7 @@
     <%= form.text_field :name %>
   </div>
 
-  <%= link_to_add_nested(form, :inventories, '#inventory-items') %>
+  <%= link_to_add_nested(form, :inventories, '#inventory-items', tag: "button") %>
 
   <div id='inventory-items'>
     <%= form.fields_for :inventories do |inventory_f| %>

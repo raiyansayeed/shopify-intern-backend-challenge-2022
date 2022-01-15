@@ -70,3 +70,13 @@ gem "pagy", "~> 5.7"
 gem "vanilla_nested", "~> 1.5"
 
 gem "friendly_id", "~> 5.4"
+
+gem "rails-healthcheck", "~> 1.4"
+
+gem "strong_migrations", "~> 0.7.9"
+
+gem "slowpoke", "~> 0.3.2"
+
+gem "bullet", "~> 7.0"
+
+gem "rack-attack", "~> 6.5"

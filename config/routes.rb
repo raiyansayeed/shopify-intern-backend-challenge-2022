@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  Healthcheck.routes(self)
   get "products/report", to: "products#download_pdf", as: "products_download"
 
   resources :products

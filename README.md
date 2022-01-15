@@ -64,11 +64,10 @@ rails s -e production
 The app includes 
 
 * rate limiting via Rack::Attack middleware 
-* healthcheck endpoint at TODO
+* healthcheck endpoint at /healthcheck
 * slugs for warehouses (though still easily viewable via model ID in the backend)
 * Custom logging with timestamps 
 * DB Timeouts 
-* Audited models (to aid in debugging client issues)
 
 All available URLS can be seen with 
 ```bash
